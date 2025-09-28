@@ -130,7 +130,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Exir",
-      website: "https://tamasha.com/",
+      website: undefined,
       location: "Iran",
       role: "Frontend Developer",
       start: "08/2016",

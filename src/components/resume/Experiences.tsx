@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { FiBriefcase, FiCalendar, FiMapPin } from "react-icons/fi";
 
 import type { Experience } from "@/data/resume";
 
@@ -17,7 +18,9 @@ function renderBullet(text: string): ReactNode {
   if (keys.length === 0) return text;
 
   const pattern = new RegExp(
-    `(${keys.map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    `(${keys
+      .map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+      .join("|")})`,
     "g"
   );
 
@@ -44,7 +47,8 @@ function renderBullet(text: string): ReactNode {
 export function Experiences({ experiences }: ExperiencesProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-lg font-semibold uppercase tracking-widest text-emerald-400">
+      <h2 className="flex items-center gap-2 text-lg font-semibold uppercase tracking-widest text-emerald-400">
+        <FiBriefcase className="h-5 w-5" aria-hidden="true" />
         Experience
       </h2>
       <div className="space-y-8">
@@ -68,13 +72,15 @@ export function Experiences({ experiences }: ExperiencesProps) {
                   ) : (
                     experience.company
                   )}
-                  <span className="ml-2 text-sm font-normal text-emerald-200/80">
+                  <span className="ml-2 inline-flex items-center gap-1 text-sm font-normal text-emerald-200/80">
+                    <FiMapPin className="h-4 w-4" aria-hidden="true" />
                     {experience.location}
                   </span>
                 </h3>
                 <p className="text-sm text-white/80">{experience.role}</p>
               </div>
-              <span className="text-sm font-medium text-emerald-200/80">
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-emerald-200/80">
+                <FiCalendar className="h-4 w-4" aria-hidden="true" />
                 {experience.start} – {experience.end}
               </span>
             </header>

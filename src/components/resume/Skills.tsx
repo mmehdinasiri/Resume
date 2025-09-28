@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { IconType } from "react-icons";
+import { FiTool } from "react-icons/fi";
 import {
   SiTypescript,
   SiJavascript,
@@ -103,7 +104,8 @@ type SkillsProps = {
 export function Skills({ skills }: SkillsProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-lg font-semibold uppercase tracking-widest text-emerald-400">
+      <h2 className="flex items-center gap-2 text-lg font-semibold uppercase tracking-widest text-emerald-400">
+        <FiTool className="h-5 w-5" aria-hidden="true" />
         Skills
       </h2>
       <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">

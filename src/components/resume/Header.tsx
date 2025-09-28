@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  FiExternalLink,
+  FiMail,
+  FiMapPin,
+  FiPhone,
+} from "react-icons/fi";
 import type { ResumeData } from "@/data/resume";
 
 type HeaderProps = {
@@ -32,34 +38,36 @@ export function Header({ data }: HeaderProps) {
           <p className="mt-2 text-base text-emerald-400 sm:text-lg">{title}</p>
         </div>
       </div>
-      <div className="flex flex-col gap-2 text-sm text-emerald-200/80 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
-        <span>{location}</span>
-        <span className="hidden sm:inline">•</span>
+      <div className="flex flex-col gap-2 text-sm text-emerald-200/80 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+        <span className="inline-flex items-center gap-2">
+          <FiMapPin className="h-4 w-4" aria-hidden="true" />
+          {location}
+        </span>
         <Link
-          className="transition-colors hover:text-emerald-200"
+          className="inline-flex items-center gap-2 transition-colors hover:text-emerald-200"
           href={`mailto:${email}`}
         >
+          <FiMail className="h-4 w-4" aria-hidden="true" />
           {email}
         </Link>
-        <span className="hidden sm:inline">•</span>
         <Link
-          className="transition-colors hover:text-emerald-200"
+          className="inline-flex items-center gap-2 transition-colors hover:text-emerald-200"
           href={`tel:${phone.replace(/\s+/g, "")}`}
         >
+          <FiPhone className="h-4 w-4" aria-hidden="true" />
           {phone}
         </Link>
         {links.map((link) => (
-          <span key={link.label} className="flex items-center gap-2 sm:gap-1">
-            <span className="hidden sm:inline">•</span>
-            <Link
-              className="underline decoration-emerald-500/60 underline-offset-4 transition-colors hover:text-emerald-200"
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {link.label}
-            </Link>
-          </span>
+          <Link
+            key={link.label}
+            className="inline-flex items-center gap-2 underline decoration-emerald-500/60 underline-offset-4 transition-colors hover:text-emerald-200"
+            href={link.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiExternalLink className="h-4 w-4" aria-hidden="true" />
+            {link.label}
+          </Link>
         ))}
       </div>
     </header>

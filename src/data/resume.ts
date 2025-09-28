@@ -23,6 +23,7 @@ export type Education = {
 export type Skill = {
   name: string;
   url?: string;
+  icon?: string;
 };
 
 export type SkillCategory = {
@@ -181,122 +182,137 @@ export const resumeData: ResumeData = {
     {
       category: "Languages & Core",
       items: [
-        { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+        {
+          name: "TypeScript",
+          url: "https://www.typescriptlang.org/",
+          icon: "typescript",
+        },
         {
           name: "JavaScript",
           url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          icon: "javascript",
         },
         {
           name: "HTML",
           url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+          icon: "html5",
         },
         {
           name: "CSS / SCSS",
           url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+          icon: "css3",
         },
       ],
     },
     {
       category: "Frontend Frameworks",
       items: [
-        { name: "React", url: "https://react.dev/" },
-        { name: "Next.js", url: "https://nextjs.org/" },
-        { name: "Gatsby", url: "https://www.gatsbyjs.com/" },
-        { name: "Vue", url: "https://vuejs.org/" },
+        { name: "React", url: "https://react.dev/", icon: "react" },
+        { name: "Next.js", url: "https://nextjs.org/", icon: "nextjs" },
+        { name: "Gatsby", url: "https://www.gatsbyjs.com/", icon: "gatsby" },
+        { name: "Vue", url: "https://vuejs.org/", icon: "vue" },
       ],
     },
     {
       category: "Styling & UI",
       items: [
-        { name: "PandaCSS", url: "https://panda-css.com/" },
-        { name: "Tailwind CSS", url: "https://tailwindcss.com/" },
+        { name: "PandaCSS", url: "https://panda-css.com/", icon: "panda" },
+        { name: "Tailwind CSS", url: "https://tailwindcss.com/", icon: "tailwind" },
         {
           name: "CSS Modules",
           url: "https://github.com/css-modules/css-modules",
+          icon: "cssmodules",
         },
         {
           name: "Styled Components",
           url: "https://styled-components.com/",
+          icon: "styledcomponents",
         },
-        { name: "Material UI", url: "https://mui.com/" },
+        { name: "Material UI", url: "https://mui.com/", icon: "mui" },
       ],
     },
     {
       category: "Testing & Quality",
       items: [
-        { name: "Playwright", url: "https://playwright.dev/" },
-        { name: "Cypress", url: "https://www.cypress.io/" },
-        { name: "Jest", url: "https://jestjs.io/" },
-        { name: "Vitest", url: "https://vitest.dev/" },
-        { name: "Zod", url: "https://zod.dev/" },
-        { name: "ESLint", url: "https://eslint.org/" },
-        { name: "Prettier", url: "https://prettier.io/" },
+        { name: "Playwright", url: "https://playwright.dev/", icon: "playwright" },
+        { name: "Cypress", url: "https://www.cypress.io/", icon: "cypress" },
+        { name: "Jest", url: "https://jestjs.io/", icon: "jest" },
+        { name: "Vitest", url: "https://vitest.dev/", icon: "vitest" },
+        { name: "Zod", url: "https://zod.dev/", icon: "zod" },
+        { name: "ESLint", url: "https://eslint.org/", icon: "eslint" },
+        { name: "Prettier", url: "https://prettier.io/", icon: "prettier" },
       ],
     },
     {
       category: "Backend & Cloud",
       items: [
-        { name: "Fastify", url: "https://fastify.dev/" },
-        { name: "tRPC", url: "https://trpc.io/" },
-        { name: "Express.js", url: "https://expressjs.com/" },
-        { name: "Node.js", url: "https://nodejs.org/" },
-        { name: "NestJS", url: "https://nestjs.com/" },
-        { name: "MongoDB", url: "https://www.mongodb.com/" },
-        { name: "Redis", url: "https://redis.io/" },
+        { name: "Fastify", url: "https://fastify.dev/", icon: "fastify" },
+        { name: "tRPC", url: "https://trpc.io/", icon: "trpc" },
+        { name: "Express.js", url: "https://expressjs.com/", icon: "express" },
+        { name: "Node.js", url: "https://nodejs.org/", icon: "nodejs" },
+        { name: "NestJS", url: "https://nestjs.com/", icon: "nestjs" },
+        { name: "MongoDB", url: "https://www.mongodb.com/", icon: "mongodb" },
+        { name: "Redis", url: "https://redis.io/", icon: "redis" },
       ],
     },
     {
       category: "Hosting",
       items: [
-        { name: "Netlify", url: "https://www.netlify.com/" },
-        { name: "Fly.io", url: "https://fly.io/" },
+        { name: "Netlify", url: "https://www.netlify.com/", icon: "netlify" },
+        { name: "Fly.io", url: "https://fly.io/", icon: "flyio" },
         {
           name: "AWS CloudWatch",
           url: "https://aws.amazon.com/cloudwatch/",
+          icon: "cloudwatch",
         },
       ],
     },
     {
       category: "Architecture & Tools",
       items: [
-        { name: "Nx", url: "https://nx.dev/" },
-        { name: "Git", url: "https://git-scm.com/" },
-        { name: "GitHub", url: "https://github.com/" },
-        { name: "GitHub Actions", url: "https://docs.github.com/en/actions" },
-        { name: "WebRTC", url: "https://webrtc.org/" },
-        { name: "Vim", url: "https://www.vim.org/" },
-        { name: "Cursor", url: "https://www.cursor.com/" },
+        { name: "Nx", url: "https://nx.dev/", icon: "nx" },
+        { name: "Git", url: "https://git-scm.com/", icon: "git" },
+        { name: "GitHub", url: "https://github.com/", icon: "github" },
+        {
+          name: "GitHub Actions",
+          url: "https://docs.github.com/en/actions",
+          icon: "githubactions",
+        },
+        { name: "WebRTC", url: "https://webrtc.org/", icon: "webrtc" },
+        { name: "Vim", url: "https://www.vim.org/", icon: "vim" },
+        { name: "Cursor", url: "https://www.cursor.com/", icon: "cursor" },
       ],
     },
     {
       category: "Product & Compliance",
       items: [
-        { name: "Contentful", url: "https://www.contentful.com/" },
-        { name: "WordPress", url: "https://wordpress.org/" },
-        { name: "ConfigCat", url: "https://configcat.com/" },
-        { name: "Didomi", url: "https://www.didomi.io/" },
-        { name: "Phrase", url: "https://phrase.com/" },
-        { name: "Tolgee", url: "https://tolgee.io/" },
+        { name: "Contentful", url: "https://www.contentful.com/", icon: "contentful" },
+        { name: "WordPress", url: "https://wordpress.org/", icon: "wordpress" },
+        { name: "ConfigCat", url: "https://configcat.com/", icon: "configcat" },
+        { name: "Didomi", url: "https://www.didomi.io/", icon: "didomi" },
+        { name: "Phrase", url: "https://phrase.com/", icon: "phrase" },
+        { name: "Tolgee", url: "https://tolgee.io/", icon: "tolgee" },
       ],
     },
     {
       category: "Observability & Monitoring",
       items: [
-        { name: "Sentry", url: "https://sentry.io/" },
-        { name: "OpenTelemetry", url: "https://opentelemetry.io/" },
-        { name: "Snowplow", url: "https://snowplow.io/" },
+        { name: "Sentry", url: "https://sentry.io/", icon: "sentry" },
+        { name: "OpenTelemetry", url: "https://opentelemetry.io/", icon: "opentelemetry" },
+        { name: "Snowplow", url: "https://snowplow.io/", icon: "snowplow" },
         {
           name: "Google Tag Manager",
           url: "https://marketingplatform.google.com/about/tag-manager/",
+          icon: "gtm",
         },
       ],
     },
     {
       category: "Build Tools & Bundlers",
       items: [
-        { name: "Webpack", url: "https://webpack.js.org/" },
-        { name: "Rollup", url: "https://rollupjs.org/" },
-        { name: "esbuild", url: "https://esbuild.github.io/" },
+        { name: "Webpack", url: "https://webpack.js.org/", icon: "webpack" },
+        { name: "Rollup", url: "https://rollupjs.org/", icon: "rollup" },
+        { name: "esbuild", url: "https://esbuild.github.io/", icon: "esbuild" },
       ],
     },
   ],

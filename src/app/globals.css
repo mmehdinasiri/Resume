@@ -19,8 +19,16 @@
   }
 }
 
-body {
-  background: var(--background);
+.resume-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background: radial-gradient(
+    circle at top,
+    #1a2335 0%,
+    #080b12 45%,
+    #03040a 100%
+  );
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

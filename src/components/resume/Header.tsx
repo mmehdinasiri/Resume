@@ -1,11 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FiExternalLink,
-  FiMail,
-  FiMapPin,
-  FiPhone,
-} from "react-icons/fi";
+import { FiExternalLink, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import type { ResumeData } from "@/data/resume";
 
 type HeaderProps = {
@@ -19,7 +14,7 @@ export function Header({ data }: HeaderProps) {
   const { name, title, location, email, phone, links, photo } = data;
 
   return (
-    <header className="flex flex-col gap-6 border-b border-emerald-900/30 pb-8 text-emerald-50">
+    <header className="flex flex-col gap-6 border-b border-gray-200/20 pb-8 text-emerald-50">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
         <div className="relative h-28 w-28 overflow-hidden rounded-full border border-white/30 shadow-lg shadow-black/40 sm:h-32 sm:w-32">
           <Image

@@ -1,10 +1,45 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import type { Experience } from "@/data/resume";
 
 type ExperiencesProps = {
   experiences: Experience[];
 };
+
+const textLinkMap: Record<string, string> = {
+  Varzesh3: "https://www.varzesh3.com/",
+  "Tamasha.ir": "https://tamasha.com/",
+};
+
+function renderBullet(text: string): ReactNode {
+  const keys = Object.keys(textLinkMap);
+  if (keys.length === 0) return text;
+
+  const pattern = new RegExp(
+    `(${keys.map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "g"
+  );
+
+  return text.split(pattern).map((segment, index) => {
+    const url = textLinkMap[segment];
+    if (url) {
+      return (
+        <Link
+          key={`${segment}-${index}`}
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-emerald-500/60 underline-offset-4 transition-colors hover:text-emerald-200"
+        >
+          {segment}
+        </Link>
+      );
+    }
+
+    return segment;
+  });
+}
 
 export function Experiences({ experiences }: ExperiencesProps) {
   return (
@@ -45,7 +80,7 @@ export function Experiences({ experiences }: ExperiencesProps) {
             </header>
             <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-white sm:text-base">
               {experience.bullets.map((bullet, index) => (
-                <li key={index}>{bullet}</li>
+                <li key={index}>{renderBullet(bullet)}</li>
               ))}
             </ul>
           </article>

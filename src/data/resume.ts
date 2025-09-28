@@ -217,7 +217,11 @@ export const resumeData: ResumeData = {
       category: "Styling & UI",
       items: [
         { name: "PandaCSS", url: "https://panda-css.com/", icon: "panda" },
-        { name: "Tailwind CSS", url: "https://tailwindcss.com/", icon: "tailwind" },
+        {
+          name: "Tailwind CSS",
+          url: "https://tailwindcss.com/",
+          icon: "tailwind",
+        },
         {
           name: "CSS Modules",
           url: "https://github.com/css-modules/css-modules",
@@ -234,7 +238,10 @@ export const resumeData: ResumeData = {
     {
       category: "Testing & Quality",
       items: [
-        { name: "Playwright", url: "https://playwright.dev/", icon: "playwright" },
+        {
+          name: "Playwright",
+          url: "https://playwright.dev/",
+        },
         { name: "Cypress", url: "https://www.cypress.io/", icon: "cypress" },
         { name: "Jest", url: "https://jestjs.io/", icon: "jest" },
         { name: "Vitest", url: "https://vitest.dev/", icon: "vitest" },
@@ -286,7 +293,11 @@ export const resumeData: ResumeData = {
     {
       category: "Product & Compliance",
       items: [
-        { name: "Contentful", url: "https://www.contentful.com/", icon: "contentful" },
+        {
+          name: "Contentful",
+          url: "https://www.contentful.com/",
+          icon: "contentful",
+        },
         { name: "WordPress", url: "https://wordpress.org/", icon: "wordpress" },
         { name: "ConfigCat", url: "https://configcat.com/", icon: "configcat" },
         { name: "Didomi", url: "https://www.didomi.io/", icon: "didomi" },
@@ -298,7 +309,11 @@ export const resumeData: ResumeData = {
       category: "Observability & Monitoring",
       items: [
         { name: "Sentry", url: "https://sentry.io/", icon: "sentry" },
-        { name: "OpenTelemetry", url: "https://opentelemetry.io/", icon: "opentelemetry" },
+        {
+          name: "OpenTelemetry",
+          url: "https://opentelemetry.io/",
+          icon: "opentelemetry",
+        },
         { name: "Snowplow", url: "https://snowplow.io/", icon: "snowplow" },
         {
           name: "Google Tag Manager",

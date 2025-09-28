@@ -29,6 +29,18 @@ export type SkillCategory = {
   items: Skill[];
 };
 
+export type ProjectLink = {
+  label: string;
+  url: string;
+};
+
+export type Project = {
+  name: string;
+  description: string;
+  highlights: string[];
+  links: ProjectLink[];
+};
+
 export type ResumeData = {
   name: string;
   title: string;
@@ -39,6 +51,7 @@ export type ResumeData = {
   links: ResumeLink[];
   summary: string;
   experiences: Experience[];
+  projects: Project[];
   education: Education[];
   skills: SkillCategory[];
 };
@@ -122,6 +135,32 @@ export const resumeData: ResumeData = {
         "Created a Vue.js-based admin panel that reduced page load times by 60%, improving user satisfaction scores among educational agency staff.",
         "Executed responsive design to ensure optimal user experiences across a wide range of devices.",
         "Optimized performance to deliver fast and seamless user interactions across applications.",
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "React Calendar Date-Time Picker",
+      description:
+        "Open-source React component that delivers fully accessible Gregorian and Jalali calendars with configurable date and time selection modes.",
+      highlights: [
+        "Supports single, range, and multiple date selection with optional time pickers, weekend markers, and disabled date rules to fit complex scheduling needs.",
+        "Provides comprehensive TypeScript support, theme customization, and context-driven APIs adopted by product teams across multiple internal projects.",
+        "Maintains an interactive documentation site with live examples, ensuring seamless onboarding for open-source users and collaborators.",
+      ],
+      links: [
+        {
+          label: "Website",
+          url: "https://mmehdinasiri.github.io/react-calendar-datetime-picker-website/",
+        },
+        {
+          label: "npm",
+          url: "https://www.npmjs.com/package/react-calendar-datetime-picker",
+        },
+        {
+          label: "GitHub",
+          url: "https://github.com/mmehdinasiri/react-calendar-datetime-picker",
+        },
       ],
     },
   ],

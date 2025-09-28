@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { Experience } from "@/data/resume";
 
 type ExperiencesProps = {
@@ -19,7 +21,18 @@ export function Experiences({ experiences }: ExperiencesProps) {
             <header className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h3 className="text-base font-semibold text-orange-300 sm:text-lg">
-                  {experience.company}
+                  {experience.website ? (
+                    <Link
+                      className="underline decoration-emerald-500/60 underline-offset-4 transition-colors hover:text-emerald-200"
+                      href={experience.website}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {experience.company}
+                    </Link>
+                  ) : (
+                    experience.company
+                  )}
                   <span className="ml-2 text-sm font-normal text-emerald-200/80">
                     {experience.location}
                   </span>

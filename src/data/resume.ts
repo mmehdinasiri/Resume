@@ -5,6 +5,7 @@ export type ResumeLink = {
 
 export type Experience = {
   company: string;
+  website?: string;
   location: string;
   role: string;
   start: string;
@@ -78,6 +79,7 @@ export const resumeData: ResumeData = {
   experiences: [
     {
       company: "Tourlane",
+      website: "https://www.tourlane.de/",
       location: "Germany",
       role: "Software Engineer",
       start: "03/2022",
@@ -96,6 +98,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Mofid",
+      website: "https://www.emofid.com/",
       location: "Iran",
       role: "Frontend Developer",
       start: "07/2020",
@@ -111,6 +114,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Farakav",
+      website: "https://www.varzesh3.com/",
       location: "Iran",
       role: "Frontend Developer",
       start: "08/2018",
@@ -126,6 +130,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Exir",
+      website: "https://tamasha.com/",
       location: "Iran",
       role: "Frontend Developer",
       start: "08/2016",
